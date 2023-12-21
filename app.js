@@ -25,7 +25,6 @@ function addTask() {
         };
 
         li.appendChild(checkbox);
-        li.appendChild(emoji);
         li.appendChild(taskText);
         li.appendChild(removeButton);
         taskList.appendChild(li);
