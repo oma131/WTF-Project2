@@ -14,13 +14,6 @@ function addTask() {
             checkAllTasksCompleted();
         };
 
-        var emoji = document.createElement('span');
-        emoji.textContent = taskInput.value;
-        var emojiPicker = document.querySelector('emoji-picker');
-        emojiPicker.addEventListener('emoji-click', (event) => {
-            emoji.textContent = event.detail.emoji.unicode;
-        });
-
         var taskText = document.createElement('span');
         taskText.textContent = taskInput.value + ` (${startTime} - ${endTime})`;
 
