@@ -4,30 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TO.DO</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
             <nav>
                 <div class="logo">TO <span class="dot">.</span> <span class="do">DO</span></div>
-                <div class="button">All Task</div>
+                <div class="button">theme</div>
             </nav>
         </header>
 
         <div class="main-container">
-            <h2>Welcome User</h2>
 
-            <div class="task-wrapper">
+            <!-- <div class="task-wrapper">
                 <div class="date"></div>
-                <h3 class="task-header"></h3>
+                <h2 class="task-header">
+                    All Task
+                    <span class="material-symbols-outlined">
+                        edit_calendar
+                    </span>
+                </h2>
                 <ul class="list-item-wrapper">
                     <li class="list-item"></li>
                     <li class="list-item"></li>
                     <li class="list-item"></li>
                     <li class="add-list-item"></li>
                 </ul>
-            </div>
+            </div> -->
+                <h1>To-Do List</h1>
+                <div id="app">
+                    <input type="text" id="taskInput" placeholder="Add a new task...">
+                    <emoji-picker for="taskInput"></emoji-picker>
+                    <input type="time" id="startTime" placeholder="Start Time">
+                    <input type="time" id="endTime" placeholder="End Time">
+                    <button onclick="addTask()">Add Task</button>
+                    <ul id="taskList"></ul>
+                </div>
         </div>
     </div>
     
